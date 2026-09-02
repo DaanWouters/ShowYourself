@@ -10,12 +10,4 @@ public class CollisionTest : MonoBehaviour
         Debug.Log("Collision detected");
     }
 
-
-
-
-
-
-
-
-
 }

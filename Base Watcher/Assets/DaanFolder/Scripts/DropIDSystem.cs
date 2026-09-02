@@ -16,54 +16,49 @@ public class DropIDSystem : MonoBehaviour
     public GameObject idCard; // GameObject for ID card for dropping it
 
 
-
-    int idCount = 1; // Counter for generating unique IDs
-    int paperCount = 1; // Counter for the number of papers dropped
-
-
-
-
-
-
-
+    public bool idCount; // Boolean to check if an ID has been generated
+    public bool paperCount; // Boolean to check if a paper has been dropped
+    public bool extraPapers; // Boolean to check if the maximum number of papers has been dropped
 
     #endregion
-
-
-
-
-
-    #region Collisions
-    void OnCollisionEnter2D(Collision2D col)
-    {
-
-        Debug.Log("Collision");
-
-
-        if (col.gameObject.CompareTag("Dropper"))
-        {
-            Debug.Log("Collision");
-        }
-    }
-
-    #endregion
-
-
-
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        idCount = false; // Initialize idCount to false
+        paperCount = false; // Initialize paperCount to false
+        extraPapers = false; //Initialize extraPapers to false
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Dropper"))
+        {
+            Debug.Log("Unique ID generated: " + GenerateUniqueID()); // Generate a unique ID and print it to the console
+        }
+        idCount = true; // Set the idCount to true to indicate that an ID has been generated
+        paperCount = true; // Set the paperCount to true to indicate that a paper has been dropped
+        extraPapers = true; // Set the extraPapers to true to indicate that the maximum number of papers has been dropped
+    } 
+
+    //void dropIDCard()
+    //{
+    //    idCard.SetActive(true);
+    //}
+
+
+    int GenerateUniqueID()
+    {
+        int uniqueID = Random.Range(1000000, 0001); 
+        return uniqueID;
+    }
+
 
     // Update is called once per frame
     void Update()
     {
 
 
-
-        
     }
 }
