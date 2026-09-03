@@ -9,7 +9,6 @@ public class RandomGenerator : MonoBehaviour
     #region Variables
     string[] names = { "Alice", "Bob", "Charlie", "David", "Eve", "Fay", "Grace", "Hank", "Ivy", "Jack", "Kara", "Liam"};
     string[] Ages = { "18", "25", "57", "60" };
-    string[] ExpireDates = { "2024-12-31", "2025-06-30", "2026-01-15", "2027-03-20" };
 
     public TextMeshProUGUI Name;
     public TextMeshProUGUI Age;
@@ -32,12 +31,7 @@ public class RandomGenerator : MonoBehaviour
     }
 
 
-    internal string ExpireDateRandomizer()
-    {
-        int randomIndex = UnityEngine.Random.Range(0, ExpireDates.Length);
-        return ExpireDates[randomIndex];
-    }
-
+   
 
 
 
@@ -68,8 +62,7 @@ public class RandomGenerator : MonoBehaviour
         {
             Name.text = "Name: " + NameRandomizer();
             Age.text = "Age: " + AgeRandomizer();
-            ExpireDate.text = "Expire Date: " + ExpireDateRandomizer();
-            Debug.Log("Name: " + NameRandomizer() + " Age: " + AgeRandomizer() + " Expire Date: " + ExpireDateRandomizer());
+            Debug.Log("Name: " + NameRandomizer() + " Age: " + AgeRandomizer());
         }
         else
         {

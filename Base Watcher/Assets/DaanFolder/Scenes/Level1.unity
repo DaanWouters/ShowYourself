@@ -1452,7 +1452,7 @@ Transform:
   m_GameObject: {fileID: 829615185}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.15, y: -1.3, z: 0}
+  m_LocalPosition: {x: -0.13, y: -1.3, z: 0}
   m_LocalScale: {x: 1.4969, y: 10.211403, z: 1.4969}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2534,6 +2534,7 @@ MonoBehaviour:
   gameOverCanvas: {fileID: 965121200}
   text: {fileID: 296793603}
   animator: {fileID: 829615193}
+  NPC: {fileID: 829615185}
 --- !u!1001 &1574746781
 PrefabInstance:
   m_ObjectHideFlags: 0
