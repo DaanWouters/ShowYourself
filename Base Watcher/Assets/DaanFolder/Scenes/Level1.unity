@@ -1236,6 +1236,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 0197919ff86b8ac4a8040a776bdf1402, type: 3}
   m_PrefabInstance: {fileID: 667772789}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &688297450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 688297452}
+  - component: {fileID: 688297451}
+  m_Layer: 0
+  m_Name: Date
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &688297451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688297450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c0904990b2a894fbf64a93e67587d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DateScript
+--- !u!4 &688297452
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688297450}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &796321038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,7 +1452,7 @@ Transform:
   m_GameObject: {fileID: 829615185}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.3, z: 0}
+  m_LocalPosition: {x: -10.15, y: -1.3, z: 0}
   m_LocalScale: {x: 1.4969, y: 10.211403, z: 1.4969}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2790,3 +2834,4 @@ SceneRoots:
   - {fileID: 389833741}
   - {fileID: 1489673450}
   - {fileID: 965121201}
+  - {fileID: 688297452}
