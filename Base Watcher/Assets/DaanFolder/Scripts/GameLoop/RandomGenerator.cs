@@ -15,7 +15,6 @@ public class RandomGenerator : MonoBehaviour
     public TextMeshProUGUI ExpireDate;
     #endregion
 
-
     #region Randomizer
     internal string NameRandomizer()
     {
@@ -37,7 +36,6 @@ public class RandomGenerator : MonoBehaviour
 
     #endregion
 
-
     #region Start void
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -47,7 +45,6 @@ public class RandomGenerator : MonoBehaviour
     }
     #endregion
 
-
     #region Update void
     // Update is called once per frame
     void Update()
@@ -56,13 +53,12 @@ public class RandomGenerator : MonoBehaviour
     }
     #endregion
 
-
+    #region Collision Detection
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Dropper"))
         {
             Name.text = "Name: " + NameRandomizer();
-            Age.text = "Age: " + AgeRandomizer();
             Debug.Log("Name: " + NameRandomizer() + " Age: " + AgeRandomizer());
         }
         else
@@ -72,4 +68,6 @@ public class RandomGenerator : MonoBehaviour
 
 
     }
+    #endregion
+
 }

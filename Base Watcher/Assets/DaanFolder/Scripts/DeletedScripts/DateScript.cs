@@ -70,18 +70,18 @@ public class DateScript : MonoBehaviour
 
 
 
-    public void RandomDatePicker()
-    {
-        DateTime dateTime = DateTime.Now;
-        Debug.Log("Current Date: " + dateTime); // print the current date and time to the console
-    }
+    //public void RandomDatePicker()
+    //{
+    //    DateTime dateTime = DateTime.Now;
+    //    Debug.Log("Current Date: " + dateTime); // print the current date and time to the console
+    //}
 
 
-    // Update is called once per frame
-    void Update()
-    {
+    //// Update is called once per frame
+    //void Update()
+    //{
         
-    }
+    //}
 
 
 

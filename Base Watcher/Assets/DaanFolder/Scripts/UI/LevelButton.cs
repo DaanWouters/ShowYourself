@@ -20,6 +20,7 @@ public class LevelButton : MonoBehaviour
     public Canvas gameOverCanvas; // a Canvas variable that is used to check if the game over canvas is active or not
 
     public Text text; // a TextMeshPro variable that is used to check the text of the level
+    public Text dateText; // a TextMeshPro variable that is used to check the date and time of the level
 
 
     public Animator animator; // a Animator variable that is used to check the animator of the level
@@ -31,7 +32,6 @@ public class LevelButton : MonoBehaviour
     
 
     #endregion
-
 
     #region Button Variables
 
@@ -85,18 +85,18 @@ public class LevelButton : MonoBehaviour
 
     #endregion
 
-
-   public void ButtonPressed()
+    #region Button Pressed Functions
+    public void ButtonPressed()
     {
         if (EventSystem.current.currentSelectedGameObject.name == "PassButton")
         {
             Pass();
-            Destroy(NPC); // destroy the NPC when the pass button is clicked and the level is passed
+            //Destroy(NPC); // destroy the NPC when the pass button is clicked and the level is passed
         }
         else if (EventSystem.current.currentSelectedGameObject.name == "DenyButton")
         {
             Deny();
-            Destroy(NPC); // destroy the NPC when the deny button is clicked and the level is denied
+            //Destroy(NPC); // destroy the NPC when the deny button is clicked and the level is denied
         }
 
 
@@ -105,7 +105,7 @@ public class LevelButton : MonoBehaviour
 
 
 
-    public void NextButton(Button button)
+    public void NextButton()
     {
         //passed = false; // set the passed variable of the LevelButton script to false
         //denied = false; // set the denied variable of the LevelButton script to false
@@ -113,31 +113,19 @@ public class LevelButton : MonoBehaviour
         Debug.Log(passed); // print to the console that the button was clicked
         Debug.Log(denied); // print to the console that the button was clicked
 
-        if(button != null)
-        {
             Debug.Log("Button Pressed");
-        }
-        else
-        {
-            Debug.Log("Button Not Pressed");
-        }
         GetComponent<NPCSpawner>().SpawnNPC(); // call the SpawnNPC function of the NPCSpawner script to spawn a new NPC when the next button is clicked
     }
 
 
+    #endregion
 
-
-
-
-
-
-
-
-
+    #region DateChecker Function
     public void DateChecker()
     {
         randomdateTime = new DateTime(UnityEngine.Random.Range(2024, 2028), UnityEngine.Random.Range(1, 13), UnityEngine.Random.Range(1, 29)); // set the random date and time to a random date and time between January 1, 2024 and December 31, 2027
         Debug.Log("Random Date: " + randomdateTime); // print the random date and time to the console
+        
 
         if (randomdateTime < DateTime.Now) // check if the date and time is less than the current date and time
         {
@@ -168,7 +156,7 @@ public class LevelButton : MonoBehaviour
         }
         if (denied)
         {
-         Debug.Log("Denied");   
+            //Debug.Log("Denied");   
             randomdateTime = new DateTime(UnityEngine.Random.Range(2024, 2028), UnityEngine.Random.Range(1, 13), UnityEngine.Random.Range(1, 29)); // set the random date and time to a random date and time between January 1, 2024 and December 31, 2027
 
         }
@@ -177,23 +165,7 @@ public class LevelButton : MonoBehaviour
     }
 
 
-
-
-
-    public void Pressing()
-    {
-        Debug.Log("Button Pressed");
-    }
-
-
-
-
-
-
-
-
-
-
+    #endregion
 
     #region Update & start
 
@@ -228,6 +200,5 @@ public class LevelButton : MonoBehaviour
     }
 
     #endregion
-
 
 }
