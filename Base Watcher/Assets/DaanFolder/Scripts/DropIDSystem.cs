@@ -12,7 +12,6 @@ public class DropIDSystem : MonoBehaviour
 
     public Rigidbody2D rb; // Reference to the Rigidbody2D component
     public BoxCollider2D boxCollider; // Reference to the BoxCollider2D component
-    public GameObject NPC; // Reference to the NPC GameObject
     public GameObject idCard; // GameObject for ID card for dropping it
 
 
@@ -42,10 +41,7 @@ public class DropIDSystem : MonoBehaviour
         extraPapers = true; // Set the extraPapers to true to indicate that the maximum number of papers has been dropped
     } 
 
-    //void dropIDCard()
-    //{
-    //    idCard.SetActive(true);
-    //}
+    
 
 
     int GenerateUniqueID()

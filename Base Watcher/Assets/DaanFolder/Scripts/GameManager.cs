@@ -38,10 +38,10 @@ public class GameManager : MonoBehaviour
         {
             Ray ray = Cam.ScreenPointToRay(Mouse.current.position.ReadValue());
             RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
-            Debug.Log("raycast shot" + hit.collider.gameObject.name);
+            //Debug.Log("raycast shot" + hit.collider.gameObject.name);
             if (hit.collider != null && hit.collider.gameObject.CompareTag("Draggable"))
             {
-                Debug.Log("Hit: " + hit.collider.gameObject.name);
+                //Debug.Log("Hit: " + hit.collider.gameObject.name);
                 selectObject = hit.transform.gameObject;
             }
         }

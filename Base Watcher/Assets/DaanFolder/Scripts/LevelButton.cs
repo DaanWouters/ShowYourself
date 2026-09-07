@@ -20,7 +20,6 @@ public class LevelButton : MonoBehaviour
     public Canvas gameOverCanvas; // a Canvas variable that is used to check if the game over canvas is active or not
 
     public Text text; // a TextMeshPro variable that is used to check the text of the level
-    public Text dateText; // a Text variable that is used to check the date and time of the level
 
 
     public Animator animator; // a Animator variable that is used to check the animator of the level
@@ -29,7 +28,7 @@ public class LevelButton : MonoBehaviour
 
     public GameObject NPC;
 
-
+    
 
     #endregion
 
@@ -45,6 +44,7 @@ public class LevelButton : MonoBehaviour
             text.text = "Points: " + points; // update the text of the level to show the points
             //animator.SetBool("Passed", true); // set the animator to play the passed animation when the pass button is clicked and the level is passed
             DateChecker(); // call the dateChecker function to check the date and time of the level
+            Destroy(NPC); // destroy the NPC when the pass button is clicked and the level is passed
         }
         Debug.Log("Pass Button Clicked"); // print to the console that the button was clicked
 
@@ -54,6 +54,7 @@ public class LevelButton : MonoBehaviour
             Debug.Log("Wrong Button!!");
             gameOverCanvas.gameObject.SetActive(true); // set the game over canvas to active when the deny button is clicked and the level is denied
             DateChecker(); // call the dateChecker function to check the date and time of the level
+            Destroy(NPC); // destroy the NPC when the pass button is clicked and the level is passed
 
         }
     }
@@ -65,6 +66,7 @@ public class LevelButton : MonoBehaviour
             points++;
             //animator.SetBool("Denied", true); // set the animator to play the passed animation when the pass button is clicked and the level is passed
             DateChecker(); // call the dateChecker function to check the date and time of the level
+            Destroy(NPC); // destroy the NPC when the pass button is clicked and the level is passed
 
         }
         if (!denied)
@@ -73,6 +75,8 @@ public class LevelButton : MonoBehaviour
             Debug.Log("Wrong Button!!");
             gameOverCanvas.gameObject.SetActive(true); // set the game over canvas to active when the deny button is clicked and the level is denied
             DateChecker(); // call the dateChecker function to check the date and time of the level
+            Destroy(gameObject); // destroy the NPC when the pass button is clicked and the level is passed
+            GetComponent<NPCSpawner>().npcCount = 0; // reset the npcCount to 0 when the pass button is clicked and the level is passed
 
 
         }
@@ -101,18 +105,23 @@ public class LevelButton : MonoBehaviour
 
 
 
-    public void NextButton()
+    public void NextButton(Button button)
     {
-        passed = false; // set the passed variable of the LevelButton script to false
-        denied = false; // set the denied variable of the LevelButton script to false
+        //passed = false; // set the passed variable of the LevelButton script to false
+        //denied = false; // set the denied variable of the LevelButton script to false
 
         Debug.Log(passed); // print to the console that the button was clicked
         Debug.Log(denied); // print to the console that the button was clicked
 
-        if (next)
+        if(button != null)
         {
-            
+            Debug.Log("Button Pressed");
         }
+        else
+        {
+            Debug.Log("Button Not Pressed");
+        }
+        GetComponent<NPCSpawner>().SpawnNPC(); // call the SpawnNPC function of the NPCSpawner script to spawn a new NPC when the next button is clicked
     }
 
 
@@ -154,7 +163,7 @@ public class LevelButton : MonoBehaviour
         if (passed)
         {
             randomdateTime = new DateTime(UnityEngine.Random.Range(2024, 2028), UnityEngine.Random.Range(1, 13), UnityEngine.Random.Range(1, 29)); // set the random date and time to a random date and time between January 1, 2024 and December 31, 2027
-            Destroy(NPC); // destroy the NPC when the pass button is clicked and the level is passed
+            //Destroy(NPC); // destroy the NPC when the pass button is clicked and the level is passed
 
         }
         if (denied)
@@ -169,7 +178,25 @@ public class LevelButton : MonoBehaviour
 
 
 
+
+
+    public void Pressing()
+    {
+        Debug.Log("Button Pressed");
+    }
+
+
+
+
+
+
+
+
+
+
+
     #region Update & start
+
 
 
     void Start()
@@ -195,6 +222,8 @@ public class LevelButton : MonoBehaviour
         //{
         //    Debug.Log("Nothing yet");
         //}
+
+
 
     }
 
