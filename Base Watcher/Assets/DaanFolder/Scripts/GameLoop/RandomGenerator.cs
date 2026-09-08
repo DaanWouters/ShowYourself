@@ -59,7 +59,7 @@ public class RandomGenerator : MonoBehaviour
         if (collision.gameObject.CompareTag("Dropper"))
         {
             Name.text = "Name: " + NameRandomizer();
-            Debug.Log("Name: " + NameRandomizer() + " Age: " + AgeRandomizer());
+            //Debug.Log("Name: " + NameRandomizer() + " Age: " + AgeRandomizer());
         }
         else
         {

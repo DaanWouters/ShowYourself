@@ -110,8 +110,8 @@ public class LevelButton : MonoBehaviour
         //passed = false; // set the passed variable of the LevelButton script to false
         //denied = false; // set the denied variable of the LevelButton script to false
 
-        Debug.Log(passed); // print to the console that the button was clicked
-        Debug.Log(denied); // print to the console that the button was clicked
+        //Debug.Log(passed); // print to the console that the button was clicked
+        //Debug.Log(denied); // print to the console that the button was clicked
 
             Debug.Log("Button Pressed");
         GetComponent<NPCSpawner>().SpawnNPC(); // call the SpawnNPC function of the NPCSpawner script to spawn a new NPC when the next button is clicked
