@@ -5,33 +5,20 @@ public class DeleteNPC : MonoBehaviour
 
 
     public GameObject NPC;
-
-
-
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    [SerializeField] private NPCSpawner spawner;
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("NPC"))
         {
-            Destroy(NPC);
-            Debug.Log("NPC Deleted");
+            Destroy(collision.gameObject);
+            spawner.npcCount = 0;
         }
         else
         {
             Debug.Log("No NPC detected");
         }
+
     }
 
 

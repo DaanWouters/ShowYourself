@@ -1,9 +1,11 @@
 using UnityEngine;
 
-public class DestroyID : MonoBehaviour
+public class DestroyScript : MonoBehaviour
 {
 
-    public bool destroyID = true; // Boolean to check if the ID card should be destroyed
+   
+
+    public bool destroyID; // Boolean to check if the ID card should be destroyed
     public GameObject idCard; // GameObject for ID card for dropping it
 
     [SerializeField] private DropIDSystem dropIDSystem; // Reference to the DropIDSystem script
@@ -22,6 +24,9 @@ public class DestroyID : MonoBehaviour
         }
 
 
+        
     }
+
+
 
 }
