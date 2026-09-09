@@ -214,18 +214,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1489673451}
-        m_TargetAssemblyTypeName: LevelButton, Assembly-CSharp
-        m_MethodName: Scam
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &32054475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -908,7 +896,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367154928}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1187,18 +1175,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1489673451}
         m_TargetAssemblyTypeName: LevelButton, Assembly-CSharp
         m_MethodName: Deny
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1489673451}
-        m_TargetAssemblyTypeName: LevelButton, Assembly-CSharp
-        m_MethodName: NotValid
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2314,7 +2290,6 @@ MonoBehaviour:
   maxCount: 1
   paperCount: 0
   extraPapers: 0
-  ID: {fileID: 4809789279528408703, guid: a811dea802678414a86ae6ff5fe31232, type: 3}
 --- !u!1 &1284794289
 GameObject:
   m_ObjectHideFlags: 0
@@ -2681,6 +2656,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelButton
   next: 0
+  passed: 0
+  denied: 0
   points: 0
   gameOverCanvas: {fileID: 965121200}
   text: {fileID: 296793603}
@@ -2688,8 +2665,6 @@ MonoBehaviour:
   ExpireDate: {fileID: 0}
   animator: {fileID: 0}
   NPC: {fileID: 0}
-  IdScript: {fileID: 4809789279528408703, guid: a811dea802678414a86ae6ff5fe31232, type: 3}
-  Spawner: {fileID: 1937424438}
 --- !u!1001 &1574746781
 PrefabInstance:
   m_ObjectHideFlags: 0

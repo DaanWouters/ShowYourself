@@ -14,8 +14,9 @@ public class IDScript : MonoBehaviour
     [SerializeField] public TextMeshProUGUI ExpireDate;
     [SerializeField] public TextMeshProUGUI UniqueNumber;
 
-    [SerializeField] public bool passed;
-    [SerializeField] public bool denied;
+    public bool passed = false;
+
+    public bool denied = false;
 
     public DateTime randomdateTime { get; set; } // a DateTime variable that is used to check the date and time of the level
 
@@ -23,6 +24,13 @@ public class IDScript : MonoBehaviour
     [Header("Strings")]
 
     private string[] PossibleNames = { "Alice", "Bob", "Charlie", "David", "Eve", "Fay", "Grace", "Hank", "Ivy", "Jack", "Kara", "Liam" };
+
+
+    [Header("Scripts")]
+    [SerializeField] public LevelButton DeniedOrPassed;
+
+
+
 
     #endregion
 
@@ -67,12 +75,6 @@ public class IDScript : MonoBehaviour
     }
 
     #endregion
-
-
-
-
-
-
 
     void Start()
     {
