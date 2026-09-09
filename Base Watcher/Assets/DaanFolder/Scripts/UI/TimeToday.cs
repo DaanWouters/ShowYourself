@@ -21,7 +21,7 @@ public class TimeToday : MonoBehaviour
     public void Date()
     {
         DateTime dateTime = DateTime.Now; // get the current date and time
-        timeText.text = dateTime.ToString("yyyy:MM:dd"); // update the text of the time to show the current date and time in the format of "yyyy:MM:dd"
+        timeText.text = dateTime.ToString("dd:MM:yyyy"); // update the text of the time to show the current date and time in the format of "yyyy:MM:dd"
     }
     #endregion
 

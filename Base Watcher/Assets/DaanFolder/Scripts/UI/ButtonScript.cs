@@ -5,7 +5,7 @@ using System; // Uses the System namespace in Unity
 public class ButtonScript : MonoBehaviour
 {
 
-    #region Button Variables
+    #region Main Menu Buttons
     public void Play() // a void function that is called when the StartButton is clicked
     { 
         SceneManager.LoadScene("Level1"); // load the GameScene when the StartButton is clicked
@@ -33,5 +33,7 @@ public class ButtonScript : MonoBehaviour
 
 
     #endregion
+
+
 
 }

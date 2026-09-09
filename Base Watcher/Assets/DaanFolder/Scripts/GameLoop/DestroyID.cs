@@ -3,21 +3,10 @@ using UnityEngine;
 public class DestroyID : MonoBehaviour
 {
 
-
     public bool destroyID = true; // Boolean to check if the ID card should be destroyed
     public GameObject idCard; // GameObject for ID card for dropping it
 
     [SerializeField] private DropIDSystem dropIDSystem; // Reference to the DropIDSystem script
-
-
-
-
-    public void falseID()
-    {
-
-
-    }
-
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -34,21 +23,5 @@ public class DestroyID : MonoBehaviour
 
 
     }
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
-
 
 }

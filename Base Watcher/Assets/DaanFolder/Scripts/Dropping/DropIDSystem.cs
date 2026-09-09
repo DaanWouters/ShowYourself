@@ -37,7 +37,7 @@ public class DropIDSystem : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("NPC") && idCount < maxCount)
         {
-            Debug.Log("Unique ID generated: " + GenerateUniqueID()); // Generate a unique ID and print it to the console
+            //Debug.Log("Unique ID generated: " + GenerateUniqueID()); // Generate a unique ID and print it to the console
             Instantiate(idCard, spawnPoint.transform.position, spawnPoint.transform.rotation); // Instantiate the ID card at the spawn point
             idCount = 1; // Set the idCount to true to indicate that an ID has been generated
         }
@@ -50,11 +50,11 @@ public class DropIDSystem : MonoBehaviour
     
 
 
-    int GenerateUniqueID()
-    {
-        int uniqueID = Random.Range(1000000, 0001); 
-        return uniqueID;
-    }
+    //int GenerateUniqueID()
+    //{
+    //    int uniqueID = Random.Range(1000000, 0001); 
+    //    return uniqueID;
+    //}
 
 
     // Update is called once per frame
