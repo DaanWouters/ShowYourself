@@ -56,9 +56,10 @@ public class RandomGenerator : MonoBehaviour
     #region Collision Detection
     void OnCollisionEnter2D(Collision2D collision)
     {
+       
         if (collision.gameObject.CompareTag("Dropper"))
         {
-            Name.text = "Name: " + NameRandomizer();
+            //Name.text = "Name: " + NameRandomizer();
             //Debug.Log("Name: " + NameRandomizer() + " Age: " + AgeRandomizer());
         }
         else

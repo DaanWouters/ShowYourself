@@ -15,8 +15,8 @@ public class DropIDSystem : MonoBehaviour
     public GameObject idCard; // GameObject for ID card for dropping it
     public GameObject spawnPoint; // GameObject for the spawn point of the ID card
 
-    public int idCount; // Boolean to check if an ID has been generated
-    public int maxCount = 2; // Maximum number of IDs that can be generated
+    public int idCount = 0; // Boolean to check if an ID has been generated
+    public int maxCount = 1; // Maximum number of IDs that can be generated
 
 
     public bool paperCount; // Boolean to check if a paper has been dropped
