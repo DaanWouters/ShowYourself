@@ -129,8 +129,8 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: IDPas
     originalName: 
-    pivot: {x: 0.4, y: -0.96}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -167,8 +167,8 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 32
-        y: 48
+        x: 27
+        y: 37
         width: 80
         height: 50
       spriteId: 2635a42a43dbc544181cb3fad014dc4d

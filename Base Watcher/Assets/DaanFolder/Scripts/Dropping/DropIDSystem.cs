@@ -13,7 +13,7 @@ public class DropIDSystem : MonoBehaviour
     public Rigidbody2D rb; // Reference to the Rigidbody2D component
     public BoxCollider2D boxCollider; // Reference to the BoxCollider2D component
     public GameObject idCard; // GameObject for ID card for dropping it
-
+    public GameObject spawnPoint; // GameObject for the spawn point of the ID card
 
     public bool idCount; // Boolean to check if an ID has been generated
     public bool paperCount; // Boolean to check if a paper has been dropped
@@ -35,6 +35,7 @@ public class DropIDSystem : MonoBehaviour
         if (collision.gameObject.CompareTag("Dropper"))
         {
             Debug.Log("Unique ID generated: " + GenerateUniqueID()); // Generate a unique ID and print it to the console
+            Instantiate(idCard, spawnPoint.transform.position, spawnPoint.transform.rotation); // Instantiate the ID card at the spawn point
         }
         idCount = true; // Set the idCount to true to indicate that an ID has been generated
         paperCount = true; // Set the paperCount to true to indicate that a paper has been dropped
