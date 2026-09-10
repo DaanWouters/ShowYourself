@@ -22,7 +22,7 @@ public class NPCSpawner : MonoBehaviour
         else
         {
 
-            Debug.Log("Maximum number of NPCs reached!"); // Log a message if the maximum number of NPCs is reached
+            Debug.Log("There is someone!"); // Log a message if the maximum number of NPCs is reached
         }
 
 
@@ -49,6 +49,7 @@ public class NPCSpawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        SpawnNPC();
 
 
 
@@ -57,7 +58,6 @@ public class NPCSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SpawnNPC();
 
     }
 }

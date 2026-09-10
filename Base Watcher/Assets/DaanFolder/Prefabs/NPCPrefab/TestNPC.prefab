@@ -184,11 +184,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DropIDSystem
   rb: {fileID: 2848010155296150623}
   boxCollider: {fileID: 6860393095629793011}
-  NPC: {fileID: 0}
   idCard: {fileID: 0}
+  spawnPoint: {fileID: 0}
   idCount: 0
+  maxCount: 1
   paperCount: 0
   extraPapers: 0
+  Anim: {fileID: 0}
+  ID: {fileID: 0}
 --- !u!114 &2980556267414071930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,9 +204,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11b97bc698323d243b5872487751aa3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomGenerator
-  Name: {fileID: 0}
-  Age: {fileID: 0}
-  ExpireDate: {fileID: 0}
 --- !u!95 &308127891748870579
 Animator:
   serializedVersion: 7
@@ -237,8 +237,9 @@ Animation:
   serializedVersion: 4
   m_Animation: {fileID: 7400000, guid: 7db8fa1c1440ae04194e6ff881e7e03c, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: 7db8fa1c1440ae04194e6ff881e7e03c, type: 2}
   - {fileID: 7400000, guid: 73953f637e50cef4a818d59eed297301, type: 2}
+  - {fileID: 7400000, guid: c579ee18c763ab24a99b565d558d324d, type: 2}
+  - {fileID: 7400000, guid: 376c737fb2594a348a335735bcd81f2b, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0

@@ -214,6 +214,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1489673451}
+        m_TargetAssemblyTypeName: LevelButton, Assembly-CSharp
+        m_MethodName: Scam
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &32054475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,7 +578,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -296.4, y: 145}
+  m_AnchoredPosition: {x: -296.4, y: 178.3}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &296793603
@@ -1174,7 +1186,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1489673451}
         m_TargetAssemblyTypeName: LevelButton, Assembly-CSharp
-        m_MethodName: Deny
+        m_MethodName: Pass
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2290,7 +2302,6 @@ MonoBehaviour:
   maxCount: 1
   paperCount: 0
   extraPapers: 0
-  Anim: {fileID: 0}
   ID: {fileID: 4809789279528408703, guid: a811dea802678414a86ae6ff5fe31232, type: 3}
 --- !u!1 &1284794289
 GameObject:
@@ -2666,7 +2677,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   NPC: {fileID: 0}
   IdScript: {fileID: 4809789279528408703, guid: a811dea802678414a86ae6ff5fe31232, type: 3}
-  Spawner: {fileID: 0}
+  Spawner: {fileID: 1937424438}
 --- !u!1001 &1574746781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2745,63 +2756,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 0197919ff86b8ac4a8040a776bdf1402, type: 3}
   m_PrefabInstance: {fileID: 1574746781}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1827394795
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2297640928174165519, guid: 35e07386c7c21ee4e89e4c99920f72a1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297640928174165519, guid: 35e07386c7c21ee4e89e4c99920f72a1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297640928174165519, guid: 35e07386c7c21ee4e89e4c99920f72a1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297640928174165519, guid: 35e07386c7c21ee4e89e4c99920f72a1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297640928174165519, guid: 35e07386c7c21ee4e89e4c99920f72a1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297640928174165519, guid: 35e07386c7c21ee4e89e4c99920f72a1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297640928174165519, guid: 35e07386c7c21ee4e89e4c99920f72a1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297640928174165519, guid: 35e07386c7c21ee4e89e4c99920f72a1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297640928174165519, guid: 35e07386c7c21ee4e89e4c99920f72a1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297640928174165519, guid: 35e07386c7c21ee4e89e4c99920f72a1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6151594690100510374, guid: 35e07386c7c21ee4e89e4c99920f72a1, type: 3}
-      propertyPath: m_Name
-      value: TestNPC
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 35e07386c7c21ee4e89e4c99920f72a1, type: 3}
 --- !u!1 &1937424436
 GameObject:
   m_ObjectHideFlags: 0
@@ -2933,7 +2887,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1489673451}
         m_TargetAssemblyTypeName: LevelButton, Assembly-CSharp
         m_MethodName: NextButton
         m_Mode: 1
@@ -2997,4 +2951,3 @@ SceneRoots:
   - {fileID: 1937424437}
   - {fileID: 367154930}
   - {fileID: 175544955}
-  - {fileID: 1827394795}

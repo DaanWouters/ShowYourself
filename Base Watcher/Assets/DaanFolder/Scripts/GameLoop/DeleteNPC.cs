@@ -13,7 +13,7 @@ public class DeleteNPC : MonoBehaviour
         if (collision.gameObject.CompareTag("NPC"))
         {
             Destroy(collision.gameObject);
-            spawner.npcCount = 0;
+           spawner.npcCount = 0;
         }
         else
         {

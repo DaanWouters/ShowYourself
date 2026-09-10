@@ -227,9 +227,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IDScript
   Name: {fileID: 8460815345335072808}
   ExpireDate: {fileID: 1348378304820839780}
-  UniqueNumber: {fileID: 0}
+  UniqueNumber: {fileID: 3549588382984592727}
   passed: 0
   denied: 0
+  DeniedOrPassed: {fileID: 0}
 --- !u!1 &3887888347297764714
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +243,7 @@ GameObject:
   - component: {fileID: 7786459135094926522}
   - component: {fileID: 3549588382984592727}
   m_Layer: 0
-  m_Name: Name (1)
+  m_Name: SpecialID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

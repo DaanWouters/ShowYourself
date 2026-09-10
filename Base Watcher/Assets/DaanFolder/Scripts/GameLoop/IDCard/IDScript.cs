@@ -59,7 +59,6 @@ public class IDScript : MonoBehaviour
             denied = true; // set the passed variable of the LevelButton script to true
             passed = false; // set the denied variable of the LevelButton script to false
 
-
         }
         else if (randomdateTime > DateTime.Now) // check if the date and time is greater than the current date and time
         {
@@ -84,7 +83,10 @@ public class IDScript : MonoBehaviour
         ExpireDate.text = randomdateTime.ToString("dd/MM/yyyy");
         UniqueNumber.text = "" + GenerateUniqueID();
 
-        //Debug.Log(randomdateTime);
+        Debug.Log(randomdateTime);
+
+        Debug.Log("Passed:  " + passed);
+        Debug.Log("Denied:  " + denied);
     }
 
     // Update is called once per frame

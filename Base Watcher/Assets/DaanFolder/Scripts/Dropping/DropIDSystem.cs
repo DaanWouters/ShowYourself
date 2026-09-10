@@ -23,6 +23,8 @@ public class DropIDSystem : MonoBehaviour
     public bool paperCount; // Boolean to check if a paper has been dropped
     public bool extraPapers; // Boolean to check if the maximum number of papers has been dropped
 
+    [SerializeField] public Animator Anim;
+
     [SerializeField] private IDScript ID;
 
     #endregion
