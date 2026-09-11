@@ -23,10 +23,12 @@ public class ButtonScript : MonoBehaviour
 
     [Header("Int")]
     public int points; // a integer variable that is used to check the points of the level
-    public int speed = 5;
+    public int MaxPoints = 1;
 
     [Header("Canvas")]
     public Canvas gameOverCanvas; // a Canvas variable that is used to check if the game over canvas is active or not
+    public Canvas WinCanvas;
+
     public GameObject PauseMenu;
 
     [Header("Text")]
@@ -44,6 +46,7 @@ public class ButtonScript : MonoBehaviour
     [Header("Scripts")]
     [SerializeField] IDScript IdScript;
     [SerializeField] NPCSpawner Spawner;
+    [SerializeField] PauseMenu pausemenu;
 
     #endregion
 
@@ -62,6 +65,11 @@ public class ButtonScript : MonoBehaviour
             animator = Spawner.npcGameObject.GetComponent<Animator>();
             animator.SetTrigger("Passed");
             Debug.Log("Animation is doorgestuurd");
+            IdScript.passed = false;
+            if (points >= MaxPoints)
+            {
+                WinCanvas.gameObject.SetActive(true);
+            }
 
         }
         else
@@ -86,6 +94,11 @@ public class ButtonScript : MonoBehaviour
             animator = Spawner.npcGameObject.GetComponent<Animator>();
 
             animator.SetTrigger("Deny");
+            IdScript.denied = false;
+            if (points >= MaxPoints)
+            {
+                WinCanvas.gameObject.SetActive(true);
+            }
 
         }
         else
@@ -112,6 +125,7 @@ public class ButtonScript : MonoBehaviour
     #region Start And Update
     void Start()
     {
+        //WinCanvas.gameObject.SetActive(false);
 
         gameOverCanvas.gameObject.SetActive(false); // set the game over canvas to inactive at the start of the game
 
@@ -119,29 +133,42 @@ public class ButtonScript : MonoBehaviour
 
     void Update()
     {
-       
 
 
 
     }
     #endregion
 
+   
 
 
    
 
 
     #region Main Menu Buttons
+
+
+    public void Hervatten()
+    {
+        pausemenu.pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+
+    }
+
+
+
     public void Play() // a void function that is called when the StartButton is clicked
     { 
         SceneManager.LoadScene("Level1"); // load the GameScene when the StartButton is clicked
         Debug.Log("Start Button Clicked"); // print to the console that the button was clicked
+        Time.timeScale = 1f;
     }
 
     public void Settings() // a void function that is called when the SettingsButton is clicked
     {
         SceneManager.LoadScene("Settings"); // load the SettingsScene when the SettingsButton is clicked
         Debug.Log("Settings Button Clicked"); // print to the console that the button was clicked
+        Time.timeScale = 1f;
     }
 
 
