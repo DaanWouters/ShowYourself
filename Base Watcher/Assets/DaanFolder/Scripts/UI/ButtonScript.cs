@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class ButtonScript : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class ButtonScript : MonoBehaviour
     //public bool passAnim;
     //public bool denyAnim;
     //public bool walkAnim;
+    public static bool GamePaused = false;
 
     [Header("Int")]
     public int points; // a integer variable that is used to check the points of the level
@@ -25,6 +27,7 @@ public class ButtonScript : MonoBehaviour
 
     [Header("Canvas")]
     public Canvas gameOverCanvas; // a Canvas variable that is used to check if the game over canvas is active or not
+    public GameObject PauseMenu;
 
     [Header("Text")]
     public Text text; // a TextMeshPro variable that is used to check the text of the level
@@ -36,11 +39,12 @@ public class ButtonScript : MonoBehaviour
 
     [Header("GameObjects")]
     public GameObject NPC;
-
+    public GameObject currentNPC;
 
     [Header("Scripts")]
     [SerializeField] IDScript IdScript;
     [SerializeField] NPCSpawner Spawner;
+
     #endregion
 
     #region PassDenyNext Button
@@ -51,12 +55,12 @@ public class ButtonScript : MonoBehaviour
 
         if (IdScript.passed)
         {
-            transform.position += Vector3.right * speed * Time.deltaTime;
+            //transform.position += Vector3.right * speed * Time.deltaTime;
             Debug.Log("Passed is true");
             points++;
             text.text = "Points: " + points;
-            //animator = NPC.GetComponent<Animator>();
-            //animator.SetTrigger("Passed");
+            animator = Spawner.npcGameObject.GetComponent<Animator>();
+            animator.SetTrigger("Passed");
             Debug.Log("Animation is doorgestuurd");
 
         }
@@ -75,18 +79,13 @@ public class ButtonScript : MonoBehaviour
 
         if (IdScript.denied)
         {
-            Debug.Log("Denied is true");
-
             points++;
+            
             text.text = "Points: " + points;
 
-            //denyAnim = true;
-            animator = NPC.GetComponent<Animator>();
-            animator.SetTrigger("Denied");
+            animator = Spawner.npcGameObject.GetComponent<Animator>();
 
-            Debug.Log("Animation is doorgestuurd");
-
-
+            animator.SetTrigger("Deny");
 
         }
         else
@@ -113,7 +112,6 @@ public class ButtonScript : MonoBehaviour
     #region Start And Update
     void Start()
     {
-        
 
         gameOverCanvas.gameObject.SetActive(false); // set the game over canvas to inactive at the start of the game
 
@@ -121,9 +119,17 @@ public class ButtonScript : MonoBehaviour
 
     void Update()
     {
+       
+
+
 
     }
     #endregion
+
+
+
+   
+
 
     #region Main Menu Buttons
     public void Play() // a void function that is called when the StartButton is clicked
@@ -149,7 +155,10 @@ public class ButtonScript : MonoBehaviour
     {
         SceneManager.LoadScene("StartScene"); // load the MainMenuScene when the MainMenuButton is clicked
         Debug.Log("Main Menu Button Clicked"); // print to the console that the button was clicked
+        Time.timeScale = 1f;
     }
+
+
 
 
     #endregion

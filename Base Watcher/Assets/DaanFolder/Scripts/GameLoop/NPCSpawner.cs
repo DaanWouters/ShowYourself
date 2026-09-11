@@ -7,6 +7,7 @@ public class NPCSpawner : MonoBehaviour
     [Header("Objects")]
     public Transform spawnPoint; // The point where the NPC will be spawned
     public GameObject npcPrefab; // The NPC prefab to be spawned
+    public GameObject npcGameObject;
 
 
     [Header("Int")]
@@ -20,7 +21,7 @@ public class NPCSpawner : MonoBehaviour
         if (npcCount < maxNPC)
         {
             Debug.Log("Spawning NPC..."); // Log a message when spawning an NPC
-            Instantiate(npcPrefab, spawnPoint.position, spawnPoint.rotation); // Instantiate the NPC prefab at the spawn point
+            npcGameObject = Instantiate(npcPrefab, spawnPoint.position, spawnPoint.rotation); // Instantiate the NPC prefab at the spawn point
             npcCount++; // Increment the NPC count
         }
         else
