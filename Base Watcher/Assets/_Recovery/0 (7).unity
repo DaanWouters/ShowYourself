@@ -1866,6 +1866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonScript
   next: 0
   points: 0
+  speed: 5
   gameOverCanvas: {fileID: 0}
   text: {fileID: 0}
   animator: {fileID: 0}
@@ -2690,6 +2691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonScript
   next: 0
   points: 0
+  speed: 5
   gameOverCanvas: {fileID: 965121200}
   text: {fileID: 296793603}
   animator: {fileID: -9003130662240465463, guid: 35e07386c7c21ee4e89e4c99920f72a1, type: 3}

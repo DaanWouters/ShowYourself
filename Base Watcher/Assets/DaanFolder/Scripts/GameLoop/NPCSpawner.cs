@@ -3,14 +3,18 @@ using UnityEngine;
 public class NPCSpawner : MonoBehaviour
 {
 
+    #region variables
+    [Header("Objects")]
     public Transform spawnPoint; // The point where the NPC will be spawned
     public GameObject npcPrefab; // The NPC prefab to be spawned
 
+
+    [Header("Int")]
     public int npcCount = 0; // The number of NPCs spawned
     public int maxNPC = 1; // The maximum number of NPCs that can be spawned
+    #endregion
 
-
-
+    #region Spawn NPC
     public void SpawnNPC()
     {
         if (npcCount < maxNPC)
@@ -24,40 +28,15 @@ public class NPCSpawner : MonoBehaviour
 
             Debug.Log("There is someone!"); // Log a message if the maximum number of NPCs is reached
         }
-
-
-
     }
+    #endregion
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    #region Start Function
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         SpawnNPC();
-
-
-
     }
+    #endregion
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

@@ -4,12 +4,15 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler,  IEndDragHandler
 {
-
+    #region variables
+    [Header("Vector 3")]
     public Vector3 mousePosition;
-    public bool moving = false; 
 
+    [Header("Bools")]
+    public bool moving = false;
+    #endregion
 
-
+    #region Dragging
     public void OnBeginDrag(PointerEventData eventData)
     {
         moving = true;
@@ -30,15 +33,13 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler,  IEnd
     {
         moving = false; 
     }
+    #endregion
 
-
-
-
-
+    #region Start And Update
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -46,4 +47,6 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler,  IEnd
     {
         
     }
+    #endregion
+
 }

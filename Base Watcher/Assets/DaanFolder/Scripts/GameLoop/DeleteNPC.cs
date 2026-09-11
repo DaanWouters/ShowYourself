@@ -3,11 +3,15 @@ using UnityEngine;
 public class DeleteNPC : MonoBehaviour
 {
 
-
+    #region Variables
+    [Header("GameObjects")]
     public GameObject NPC;
+
+    [Header("Scripts")]
     [SerializeField] private NPCSpawner spawner;
+    #endregion
 
-
+    #region OnCollisionEnter NPC
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("NPC"))
@@ -19,10 +23,7 @@ public class DeleteNPC : MonoBehaviour
         {
             Debug.Log("No NPC detected");
         }
-
     }
-
-
-
+    #endregion
 
 }

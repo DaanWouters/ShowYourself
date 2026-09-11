@@ -6,6 +6,8 @@ public class TimeToday : MonoBehaviour
 {
 
     #region Variables
+
+    [Header("Text")]
     public Text timeText; // a Text variable that is used to check the text of the time
     #endregion
 

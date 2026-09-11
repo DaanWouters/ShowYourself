@@ -13,9 +13,7 @@ GameObject:
   - component: {fileID: 6860393095629793011}
   - component: {fileID: 2848010155296150623}
   - component: {fileID: 6952020659079533302}
-  - component: {fileID: 2980556267414071930}
-  - component: {fileID: 308127891748870579}
-  - component: {fileID: 2056190317372138402}
+  - component: {fileID: -9003130662240465463}
   m_Layer: 0
   m_Name: TestNPC
   m_TagString: NPC
@@ -182,29 +180,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f3a03dc7f52e04882d8becaac4c50c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropIDSystem
-  rb: {fileID: 2848010155296150623}
-  boxCollider: {fileID: 6860393095629793011}
-  idCard: {fileID: 0}
+  idCard: {fileID: 3567190442416752259, guid: a811dea802678414a86ae6ff5fe31232, type: 3}
   spawnPoint: {fileID: 0}
   idCount: 0
   maxCount: 1
-  paperCount: 0
-  extraPapers: 0
-  Anim: {fileID: 0}
-  ID: {fileID: 0}
---- !u!114 &2980556267414071930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6151594690100510374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11b97bc698323d243b5872487751aa3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RandomGenerator
---- !u!95 &308127891748870579
+  Anim: {fileID: -9003130662240465463}
+  ID: {fileID: 4809789279528408703, guid: a811dea802678414a86ae6ff5fe31232, type: 3}
+  animation: {fileID: 0}
+--- !u!95 &-9003130662240465463
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -214,7 +197,7 @@ Animator:
   m_GameObject: {fileID: 6151594690100510374}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b3b166ca440d0f542a6c41694a8fdb76, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1ab60f7076a892148804029d708e2840, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -226,22 +209,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!111 &2056190317372138402
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6151594690100510374}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: 7db8fa1c1440ae04194e6ff881e7e03c, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 73953f637e50cef4a818d59eed297301, type: 2}
-  - {fileID: 7400000, guid: c579ee18c763ab24a99b565d558d324d, type: 2}
-  - {fileID: 7400000, guid: 376c737fb2594a348a335735bcd81f2b, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_UpdateMode: 0
-  m_CullingType: 0

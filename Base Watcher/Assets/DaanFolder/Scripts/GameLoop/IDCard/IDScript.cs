@@ -27,15 +27,9 @@ public class IDScript : MonoBehaviour
 
 
     [Header("Scripts")]
-    [SerializeField] public LevelButton DeniedOrPassed;
-
-
-
+    [SerializeField] public ButtonScript DeniedOrPassed;
 
     #endregion
-
-
-
 
     #region Randomizer
 
@@ -75,6 +69,7 @@ public class IDScript : MonoBehaviour
 
     #endregion
 
+    #region Start And Update
     void Start()
     {
         DateChecker();
@@ -94,4 +89,6 @@ public class IDScript : MonoBehaviour
     {
         
     }
+    #endregion
+
 }
